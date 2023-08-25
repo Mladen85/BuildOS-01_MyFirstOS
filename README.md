@@ -1,5 +1,5 @@
 # Build an OS
-Example how to build own OS.
+Example how to build own OS on "floppy disk".
 
 
 # Source
