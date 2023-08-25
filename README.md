@@ -3,9 +3,9 @@ Example how to build own OS.
 
 
 # Source
-_Thanks to [nanobyte](https://www.youtube.com/@nanobyte-dev)_
+_Thanks to [nanobyte](https://www.youtube.com/@nanobyte-dev) YouTube channel_
 
-[Building an OS](https://www.youtube.com/watch?v=9t-SPC7Tczc&list=PLFjM7v6KGMpiH2G-kT781ByCNC_0pKpPN)
+YouTube playlist: https://www.youtube.com/watch?v=9t-SPC7Tczc&list=PLFjM7v6KGMpiH2G-kT781ByCNC_0pKpPN
 
 
 # Setup
