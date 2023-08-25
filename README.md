@@ -1,15 +1,15 @@
-#Build an OS
+# Build an OS
 Example how to build own OS.
 
 
-#Source
+# Source
 _Thanks to [nanobyte](https://www.youtube.com/@nanobyte-dev)_
 
 [Building an OS](https://www.youtube.com/watch?v=9t-SPC7Tczc&list=PLFjM7v6KGMpiH2G-kT781ByCNC_0pKpPN)
 
 
-#Setup
-##Linux
+# Setup
+## Linux
 - Text editor
 - Make
 - NASM - assembler
@@ -41,11 +41,11 @@ will be merged to `master` branch.<br>
 Will be used in case project is split to different development paths.
 
 
-#Links
+# Links
 Original source code: https://github.com/nanobyte-dev/nanobyte_os
 
 
-#Documentation:
+# Documentation:
 - Enabling Windows Subsystem for Linux: https://docs.microsoft.com/en-us/wind...
 - Installing Ubuntu in Windows Subsystem for Linux: https://tutorials.ubuntu.com/tutorial...
 
