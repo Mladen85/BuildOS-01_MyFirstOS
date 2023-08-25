@@ -46,7 +46,7 @@ Original source code: https://github.com/nanobyte-dev/nanobyte_os
 
 
 # Documentation:
-- Enabling Windows Subsystem for Linux: https://docs.microsoft.com/en-us/wind...
-- Installing Ubuntu in Windows Subsystem for Linux: https://tutorials.ubuntu.com/tutorial...
+- Enabling Windows Subsystem for Linux: https://learn.microsoft.com/en-us/windows/wsl/install
+- Installing Ubuntu in Windows Subsystem for Linux: hhttps://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#5-install-your-first-package
 
-"Table of x86 Registers svg" by Immae is licensed under Creative Commons Attribution-Share Alike 3.0 Unported (https://commons.wikimedia.org/wiki/Fi...)
+"Table of x86 Registers svg" by Immae is licensed under Creative Commons Attribution-Share Alike 3.0 Unported (https://commons.wikimedia.org/wiki/File:Table_of_x86_Registers_svg.svg)
