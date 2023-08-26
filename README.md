@@ -10,25 +10,46 @@ YouTube playlist: https://www.youtube.com/watch?v=9t-SPC7Tczc&list=PLFjM7v6KGMpi
 
 # Setup
 ## Linux
-- Text editor
+- Text editor<br>
+If using Visual Studio Code, install extension `x86 and x86_64 Assembly.`
+
 - Make
 ```
 $ apt install make
 ```
+
 - NASM - assembler
 ```
 $ apt install nasm
 ```
+
 - qemu (or any other virtualization software, e.g. VirtualBox, VMWare)
 ```
 $ apt install qemu-system-x86
 ```
+
+- bochs - emulator and debugger for x86 proccessor
+```
+$ apt install bochs
+$ apt install bochs-sdl bochsbios vgabios 
+```
+### Run `bochs`
+Create configuration file `bochs_config`.<br>
+Run `debug.sh` to start emulation.
 
 
 # Run
 Run virtual machine with our boot
 ```
 $ qemu-system-i386 -fda build/main_floppy.img
+```
+Or run `run.sh`<br>
+(First set run.sh as executable `chmod +x run.sh`).
+
+
+Test image
+```
+$ mdir -i build/main_floppy.img
 ```
 
 
