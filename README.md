@@ -11,14 +11,18 @@ YouTube playlist: https://www.youtube.com/watch?v=9t-SPC7Tczc&list=PLFjM7v6KGMpi
 # Setup
 ## Linux
 - Text editor
+If using Visual Studio Code, install extension `x86 and x86_64 Assembly.
+`
 - Make
 ```
 $ apt install make
 ```
+
 - NASM - assembler
 ```
 $ apt install nasm
 ```
+
 - qemu (or any other virtualization software, e.g. VirtualBox, VMWare)
 ```
 $ apt install qemu-system-x86
