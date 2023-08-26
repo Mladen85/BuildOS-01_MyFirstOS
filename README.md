@@ -29,6 +29,14 @@ $ apt install qemu-system-x86
 ```
 
 - bochs - emulator and debugger for x86 proccessor
+```
+$ apt install bochs
+$ apt install bochs-sdl bochsbios vgabios 
+```
+### Run `bochs`
+Create configuration file `bochs_config`.<br>
+Run `debug.sh` to start emulation.
+
 
 # Run
 Run virtual machine with our boot
