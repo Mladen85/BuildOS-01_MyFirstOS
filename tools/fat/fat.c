@@ -32,14 +32,14 @@ typedef struct
     uint32_t VolumeId;          // serial number, value doesn't matter, 4 bytes
     uint8_t VolumeLabel[11];    // 11 bytes, padded with spaces
     uint8_t SystemId[8];        // 08 bytes, padded with spaces
-    
+
     // we don't care about code ...
 } __attribute__((packed)) BootSector; //do not align
 
 typedef struct
 {
     uint8_t Name[11];
-    uint8_t Attribute;
+    uint8_t Attributes;
     uint8_t _Reserved;
     uint8_t CreatedTimeTenths;
     uint16_t CreatedTime;
