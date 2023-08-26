@@ -1,5 +1,5 @@
 # Build an OS
-Example how to build own OS.
+Example how to build own OS on "floppy disk".
 
 
 # Source
@@ -12,10 +12,23 @@ YouTube playlist: https://www.youtube.com/watch?v=9t-SPC7Tczc&list=PLFjM7v6KGMpi
 ## Linux
 - Text editor
 - Make
+```
+$ apt install make
+```
 - NASM - assembler
+```
+$ apt install nasm
+```
 - qemu (or any other virtualization software, e.g. VirtualBox, VMWare)
 ```
-$ apt install make nasm qemu
+$ apt install qemu-system-x86
+```
+
+
+# Run
+Run virtual machine with our boot
+```
+$ qemu-system-i386 -fda build/main_floppy.img
 ```
 
 
