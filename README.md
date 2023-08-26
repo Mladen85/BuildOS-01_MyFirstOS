@@ -10,9 +10,9 @@ YouTube playlist: https://www.youtube.com/watch?v=9t-SPC7Tczc&list=PLFjM7v6KGMpi
 
 # Setup
 ## Linux
-- Text editor
-If using Visual Studio Code, install extension `x86 and x86_64 Assembly.
-`
+- Text editor<br>
+If using Visual Studio Code, install extension `x86 and x86_64 Assembly.`
+
 - Make
 ```
 $ apt install make
@@ -28,11 +28,20 @@ $ apt install nasm
 $ apt install qemu-system-x86
 ```
 
+- bochs - emulator and debugger for x86 proccessor
 
 # Run
 Run virtual machine with our boot
 ```
 $ qemu-system-i386 -fda build/main_floppy.img
+```
+Or run `run.sh`<br>
+(First set run.sh as executable `chmod +x run.sh`).
+
+
+Test image
+```
+$ mdir -i build/main_floppy.img
 ```
 
 

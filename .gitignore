@@ -1,2 +1,5 @@
 # Ignore build files
 /build
+
+# Ignore temporary files that starts with tmp_
+tmp_*
