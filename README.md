@@ -1,5 +1,5 @@
 # Build an OS
-Example how to build own OS.
+Example how to build own OS on "floppy disk".
 
 
 # Source
@@ -10,12 +10,46 @@ YouTube playlist: https://www.youtube.com/watch?v=9t-SPC7Tczc&list=PLFjM7v6KGMpi
 
 # Setup
 ## Linux
-- Text editor
+- Text editor<br>
+If using Visual Studio Code, install extension `x86 and x86_64 Assembly.`
+
 - Make
+```
+$ apt install make
+```
+
 - NASM - assembler
+```
+$ apt install nasm
+```
+
 - qemu (or any other virtualization software, e.g. VirtualBox, VMWare)
 ```
-$ apt install make nasm qemu
+$ apt install qemu-system-x86
+```
+
+- bochs - emulator and debugger for x86 proccessor
+```
+$ apt install bochs
+$ apt install bochs-sdl bochsbios vgabios 
+```
+### Run `bochs`
+Create configuration file `bochs_config`.<br>
+Run `debug.sh` to start emulation.
+
+
+# Run
+Run virtual machine with our boot
+```
+$ qemu-system-i386 -fda build/main_floppy.img
+```
+Or run `run.sh`<br>
+(First set run.sh as executable `chmod +x run.sh`).
+
+
+Test image
+```
+$ mdir -i build/main_floppy.img
 ```
 
 
@@ -47,6 +81,6 @@ Original source code: https://github.com/nanobyte-dev/nanobyte_os
 
 # Documentation:
 - Enabling Windows Subsystem for Linux: https://learn.microsoft.com/en-us/windows/wsl/install
-- Installing Ubuntu in Windows Subsystem for Linux: hhttps://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#5-install-your-first-package
+- Installing Ubuntu in Windows Subsystem for Linux: https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#5-install-your-first-package
 
 "Table of x86 Registers svg" by Immae is licensed under Creative Commons Attribution-Share Alike 3.0 Unported (https://commons.wikimedia.org/wiki/File:Table_of_x86_Registers_svg.svg)
