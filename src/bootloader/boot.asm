@@ -30,7 +30,7 @@ ebr_drive_number:           db 0            ; 0x00 floppy, 0x80 hdd
                             db 0            ; reserved
 ebr_signature:              db 29
 ebr_volume_id:              db 12h, 34h, 56h, 78h   ; serial number, value doesn't matter, 4 bytes
-ebr_volume_label:           db 'My OS      '        ; 11 bytes, padded with spaces
+ebr_volume_label:           db 'MY OS      '        ; 11 bytes, padded with spaces
 ebr_system_id:              db 'FAT12   '   ; 8 bytes, padded with spaces
 
 ;
@@ -52,7 +52,7 @@ start:
     ;   make sure we are in the expected location
     push es
     push word .after
-    ret                 ; TODO: in nanobyte code here is 'retf', this part of code is not yet tested
+    retf
 
 .after:
 
@@ -99,7 +99,7 @@ start:
     jz .root_dir_after
     inc ax                              ; division remainder != 0, add 1
                                         ; this means we have a sector only partially filled with entries
-    
+
 .root_dir_after:
     ; read root directory
     mov cl, al                  ; number of sectors to read = size of root directory
@@ -232,7 +232,7 @@ wait_key_and_reboot:
 ;
 ; Prints a string to the screen
 ; Params:
-;   - ds:si pointers to string
+;   - ds:si pointer to string
 ;
 puts:
     ; save registers we will modify
@@ -268,7 +268,7 @@ puts:
 ;   - ax: LBA address
 ; Returns:
 ;   - cx [bits 0-5 ]: sector number
-;   - cx [bits 6-15]:  cylinder
+;   - cx [bits 6-15]: cylinder
 ;   - dh: head
 ;
 
@@ -287,7 +287,7 @@ lba_to_chs:
     xor dx, dx          ; dx = 0
     div word [bdb_heads]                ; ax = (LBA / SectorsPerTrack) / Heads = cylinder
                                         ; dx = (LBA / SectorsPerTrack) % Heads = head
-    mov dh, dl                          ; dl = head
+    mov dh, dl                          ; dh = head
     mov ch, al                          ; ch = cylinder (lower 8 bits)
     shl ah, 6                           ; 
     or cl, ah                           ; put upper 2 bits of cylinder in cl
@@ -325,8 +325,8 @@ disk_read:
 
 .retry:
     pusha                               ; save all registers, we don't know what BIOS modifies
-    stc                                 ; set carry flag,some BIOS'es don't set it
-    int 13h                             ; (call interupt 13h) carry flag cleard = success
+    stc                                 ; set carry flag, some BIOS'es don't set it
+    int 13h                             ; (call interupt 13h) carry flag cleared = success
     jnc .done                           ; jump if carry flag not set
     
     ; read failed
@@ -369,7 +369,7 @@ disk_reset:
 ; messages
 msg_loading:            db 'Loading...', ENDL, 0
 msg_read_failed:        db 'Read from disk failed!', ENDL, 0
-msg_kernel_not_found    db 'KERNEL.BIN file not found!', ENDL, 0
+msg_kernel_not_found:   db 'KERNEL.BIN file not found!', ENDL, 0
 
 file_kernel_bin:        db 'KERNEL  BIN'
 ; variables
