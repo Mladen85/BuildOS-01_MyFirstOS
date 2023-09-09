@@ -26,7 +26,7 @@ typedef struct
     uint32_t LargeSectorCount;
 
     // extended boot record
-    uint8_t DriverNumber;
+    uint8_t DriveNumber;
     uint8_t _Reserved;
     uint8_t Signature;
     uint32_t VolumeId;          // serial number, value doesn't matter, 4 bytes
@@ -34,7 +34,7 @@ typedef struct
     uint8_t SystemId[8];        // 08 bytes, padded with spaces
 
     // we don't care about code ...
-} __attribute__((packed)) BootSector; //do not align
+} __attribute__((packed)) BootSector; //do not align, pack bytes with no free space
 
 typedef struct
 {
@@ -135,7 +135,7 @@ bool readFile(DirectoryEntry* fileEntry, FILE* disk, uint8_t* outputBuffer)
 
 }
 
-int main(int  argc, char** argv)
+int main(int argc, char** argv)
 {
     if(argc < 3)
     {

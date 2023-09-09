@@ -16,7 +16,7 @@ start:
 ;
 ; Prints a string to the screen
 ; Params:
-;   - ds:si pointers to string
+;   - ds:si pointer to string
 ;
 puts:
     ; save registers we will modify
