@@ -33,6 +33,12 @@ $ apt install qemu-system-x86
 $ apt install bochs
 $ apt install bochs-sdl bochsbios vgabios 
 ```
+
+- Open Watcom - 16 bit C/C++ compiler (other older 16 bit C/C++ compilers are: "Digital Mars", "bcc", "tcc"...)
+```
+https://github.com/open-watcom/open-watcom-v2/releases
+```
+In Current Build open Assets and download version for your OS (e.g. "open-watcom-2_0-c-linux-x64"). Set `chmod` to `+x` and run as superuser. Select 16 bit compiler and Huge memory model.
 ### Run `bochs`
 Create configuration file `bochs_config`.<br>
 Run `debug.sh` to start emulation.
